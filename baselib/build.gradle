@@ -1,8 +1,11 @@
 apply plugin: 'com.android.library'
-//基础类
-//工具类
-//格式化的接口
-//格式化的BaseActivity BaseFragment
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.Brioal'
+//BaseActivity基类
+//BaseFragment 基类
+//滑动返回框架
+//各工具类
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
@@ -29,9 +32,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     compile 'com.android.support:appcompat-v7:24.1.1'
     testCompile 'junit:junit:4.12'
     compile 'io.reactivex:rxandroid:1.2.1'
@@ -39,5 +39,3 @@ dependencies {
     compile files('libs/butterknife-7.0.1.jar')
 
 }
-
-apply from: '../bintray.gradle'
