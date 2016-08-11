@@ -195,17 +195,17 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    abstract void initVar(); //初始化参数
+    public abstract void initVar(); //初始化参数
 
-    abstract void initView(Bundle saveInstanceState); //实例化View相关
+    public abstract void initView(Bundle saveInstanceState); //实例化View相关
 
-    abstract void loadDataLocal(); //加载本地数据
+    public abstract void loadDataLocal(); //加载本地数据
 
-    abstract void loadDataNet(); //加载网络数据
+    public abstract void loadDataNet(); //加载网络数据
 
-    abstract void setView(); //数据显示到界面
+    public abstract void setView(); //数据显示到界面
 
-    abstract void updateView(); //更新数据到界面
+    public abstract void updateView(); //更新数据到界面
 
-    abstract void saveDataLocal(); //保存数据到本地
+    public abstract void saveDataLocal(); //保存数据到本地
 }
