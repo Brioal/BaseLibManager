@@ -165,21 +165,21 @@ public abstract class BaseActivity extends AppCompatActivity {
         }).start();
     }
 
-    abstract void initVar(); //初始化参数
+    public abstract void initVar(); //初始化参数
 
-    abstract void initView(Bundle savedInstanceState); //初始化View相关
+    public abstract void initView(Bundle savedInstanceState); //初始化View相关
 
-    abstract void initTheme(); //主题设置相关
+    public abstract void initTheme(); //主题设置相关
 
-    abstract void loadDataLocal(); //从本地获取数据(线程中处理)
+    public abstract void loadDataLocal(); //从本地获取数据(线程中处理)
 
-    abstract void loadDataNet(); //从网络获取数据(线程中处理)
+    public abstract void loadDataNet(); //从网络获取数据(线程中处理)
 
-    abstract void setView(); //内容显示到界面
+    public abstract void setView(); //内容显示到界面
 
-    abstract void updateView(); //更新数据到界面
+    public abstract void updateView(); //更新数据到界面
 
-    abstract void saveDataLocal(); //保存数据到本地(线程中处理)
+    public abstract void saveDataLocal(); //保存数据到本地(线程中处理)
 
     //重写此方法可以对收到的消息进行事件处理
     protected void messageReceived(Message message) {
