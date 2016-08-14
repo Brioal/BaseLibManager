@@ -15,7 +15,7 @@
 ##Step 2. Add the dependency
 ```
 	dependencies {
-	        compile 'com.github.Brioal:BaseLibManager:1.0'
+	        compile 'com.github.Brioal:BaseLibManager:1.1'
 	}
 	
 	```
