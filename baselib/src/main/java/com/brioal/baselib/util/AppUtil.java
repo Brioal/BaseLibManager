@@ -27,14 +27,11 @@ import java.util.List;
  * 8.分享Apk信息
  * 9.获取App信息的一个封装类(包名、版本号、应用信息、图标、名称等)
  * 10.判断当前App处于前台还是后台
- * Created by Brioal on 2016/8/1.
  */
 
 public class AppUtil {
 
-    /**
-     * 安装指定路径下的Apk
-     */
+    //安装指定路径下的Apk
     public static void installApk(String filePath, Activity activity) {
         Intent intent = new Intent();
         intent.setAction("android.intent.action.VIEW");
@@ -43,9 +40,7 @@ public class AppUtil {
         activity.startActivityForResult(intent, 0);
     }
 
-    /**
-     * 卸载指定包名的App
-     */
+    //卸载指定包名的App
     public static void uninstallApp(String packageName, Activity activity) {
         Intent intent = new Intent();
         intent.setAction("android.intent.action.DELETE");
@@ -54,9 +49,7 @@ public class AppUtil {
         activity.startActivityForResult(intent, 0);
     }
 
-    /**
-     * 获取App名称
-     */
+    //获取App名称
     public static String getAppName(Context context) {
         try {
             PackageManager packageManager = context.getPackageManager();
@@ -70,9 +63,7 @@ public class AppUtil {
         return null;
     }
 
-    /**
-     * 获取当前App版本号
-     */
+    // 获取当前App版本号
     public static String getVersionName(Context context) {
         String versionName = null;
         PackageManager pm = context.getPackageManager();
@@ -88,9 +79,7 @@ public class AppUtil {
         return versionName;
     }
 
-    /**
-     * 获取当前App版本Code
-     */
+    //获取当前App版本Code
     public static int getVersionCode(Context context) {
         int versionCode = 0;
         PackageManager pm = context.getPackageManager();
@@ -106,9 +95,7 @@ public class AppUtil {
         return versionCode;
     }
 
-    /**
-     * 打开指定包名的App
-     */
+    //打开指定包名的App
     public static void openOtherApp(String packageName, Context context) {
         PackageManager manager = context.getPackageManager();
         Intent launchIntentForPackage = manager.getLaunchIntentForPackage(packageName);
@@ -117,9 +104,7 @@ public class AppUtil {
         }
     }
 
-    /**
-     * 打开指定包名的App应用信息界面
-     */
+    //打开指定包名的App应用信息界面
     public static void showAppInfo(String packageName, Context context) {
         Intent intent = new Intent();
         intent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
@@ -127,9 +112,7 @@ public class AppUtil {
         context.startActivity(intent);
     }
 
-    /**
-     * 分享Apk信息
-     */
+    //分享Apk信息
     public static void shareApkInfo(String info, Context context) {
         Intent intent = new Intent();
         intent.setAction("android.intent.action.SEND");
@@ -139,9 +122,7 @@ public class AppUtil {
         context.startActivity(intent);
     }
 
-    /**
-     * 获取App信息的一个封装类(包名、版本号、应用信息、图标、名称等)
-     */
+    //获取App信息的一个封装类(包名、版本号、应用信息、图标、名称等)
     public static List<AppInfo> getAppInfos(Context context) {
         List<AppInfo> list = new ArrayList<AppInfo>();
         //获取应用程序信息
@@ -222,9 +203,8 @@ public class AppUtil {
 
     // 需添加<uses-permission android:name="android.permission.GET_TASKS"/>
 // 并且必须是系统应用该方法才有效
-    /**
-     * 判断当前App处于前台还是后台
-     */
+
+    //判断当前App处于前台还是后台
     public static boolean isApplicationBackground(final Context context) {
         ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         @SuppressWarnings("deprecation")

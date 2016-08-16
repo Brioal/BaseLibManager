@@ -49,10 +49,6 @@ public class ExtraToast {
             hide();
         }
     };
-
-    /**
-     * Show the view for the specified duration.
-     */
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public void show(){
         if (isShow) return;
@@ -69,12 +65,6 @@ public class ExtraToast {
             handler.postDelayed(hideRunnable, mDuration * 1000);
         }
     }
-
-    /**
-     * Close the view if it's showing, or don't show it if it isn't showing yet.
-     * You do not normally have to call this.  Normally view will disappear on its own
-     * after the appropriate duration.
-     */
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public void hide(){
         if(!isShow) return;
@@ -94,12 +84,6 @@ public class ExtraToast {
         return toast.getView();
     }
 
-    /**
-     * Set how long to show the view for.
-     * @see #LENGTH_SHORT
-     * @see #LENGTH_LONG
-     * @see #LENGTH_ALWAYS
-     */
     public void setDuration(int duration) {
         mDuration = duration;
     }

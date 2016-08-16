@@ -12,9 +12,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class XmlLog {
 
     public static void printXml(String tag, String xml, String headString) {

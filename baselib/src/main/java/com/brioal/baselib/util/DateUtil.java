@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
 
-/**
- * Created by Brioal on 2016/6/17.
+/**时间工具
+ *  * Created by Brioal on 2016/6/17.
  */
 public class DateUtil {
     //获取今天零时的毫秒值

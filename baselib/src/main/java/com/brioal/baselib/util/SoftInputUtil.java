@@ -10,8 +10,6 @@ import static android.content.Context.INPUT_METHOD_SERVICE;
 
 /**
  * 软键盘管理类
- * <p>
- * <p>
  * 1.避免输入法面板遮挡
  * 2.动态隐藏软键盘
  * 3.改变软键盘的状态,弹出时隐藏,隐藏时弹出

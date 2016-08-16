@@ -5,23 +5,6 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import java.io.File;
-
-/**
- * This is a Log tool，with this you can the following
- * <ol>
- * <li>use KLog.d(),you could print whether the method execute,and the default tag is current class's name</li>
- * <li>use KLog.d(msg),you could print log as before,and you could location the method with a click in Android Studio Logcat</li>
- * <li>use KLog.json(),you could print json string with well format automatic</li>
- * </ol>
- *
- * @author zhaokaiqiang
- *         github https://github.com/ZhaoKaiQiang/KLog
- *         15/11/17 扩展功能，添加对文件的支持
- *         15/11/18 扩展功能，增加对XML的支持，修复BUG
- *         15/12/8  扩展功能，添加对任意参数的支持
- *         15/12/11 扩展功能，增加对无限长字符串支持
- *         16/6/13  扩展功能，添加对自定义全局Tag的支持
- */
 public class KLog {
 
     public static final String LINE_SEPARATOR = System.getProperty("line.separator");

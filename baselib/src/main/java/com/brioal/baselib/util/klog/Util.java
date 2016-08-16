@@ -3,9 +3,6 @@ package com.brioal.baselib.util.klog;
 import android.text.TextUtils;
 import android.util.Log;
 
-/**
- * Created by zhaokaiqiang on 15/12/11.
- */
 public class Util {
 
     public static boolean isEmpty(String line) {

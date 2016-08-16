@@ -65,26 +65,6 @@ public class PhoneUtil {
         return deviceID;
     }
 
-    /**
-     * 获取手机状态信息
-     * 需添加权限<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-     * 返回如下
-     * DeviceId(IMEI) = 99000311726612
-     * DeviceSoftwareVersion = 00
-     * Line1Number =
-     * NetworkCountryIso = cn
-     * NetworkOperator = 46003
-     * NetworkOperatorName = 中国电信
-     * NetworkType = 6
-     * honeType = 2
-     * SimCountryIso = cn
-     * SimOperator = 46003
-     * SimOperatorName = 中国电信
-     * SimSerialNumber = 89860315045710604022
-     * SimState = 5
-     * SubscriberId(IMSI) = 460030419724900
-     * VoiceMailNumber = *86
-     */
     public static String getPhoneStatus(Context context) {
         TelephonyManager tm = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
@@ -109,9 +89,7 @@ public class PhoneUtil {
 
     // 需添加权限<uses-permission android:name="android.permission.CALL_PHONE"/>
 
-    /**
-     * 拨打电话
-     */
+     //拨打电话
     public static void callDial(Context context, String phoneNumber) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             context.startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber)));
@@ -120,9 +98,7 @@ public class PhoneUtil {
 
     }
 
-    /**
-     * 发送短信
-     */
+    //发送短信
     public static void sendSms(Context context, String phoneNumber, String content) {
         Uri uri = Uri.parse("smsto:" + (TextUtils.isEmpty(phoneNumber) ? "" : phoneNumber));
         Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
@@ -130,11 +106,6 @@ public class PhoneUtil {
         context.startActivity(intent);
     }
 
-    /**
-     * 获取手机联系人
-     * 需添加权限<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-     * 需添加权限<uses-permission android:name="android.permission.READ_CONTACTS" />
-     */
     public static List<HashMap<String, String>> getAllContactInfo(Context context) {
         SystemClock.sleep(3000);
         ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
@@ -224,11 +195,9 @@ public class PhoneUtil {
     */
     }
 
-    /**
-     * 获取手机短信并保存到xml中
-     * 需添加权限<uses-permission android:name="android.permission.READ_SMS"/>
-     * 需添加权限<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-     */
+
+    //需添加权限<uses-permission android:name="android.permission.READ_SMS"/>
+    //需添加权限<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     public static void getAllSMS(Context context) {
         //1.获取短信
         //1.1获取内容解析者
@@ -293,9 +262,7 @@ public class PhoneUtil {
         }
     }
 
-    /**
-     * 打开网络设置界面
-     */
+    //打开网络设置界面
     public static void openSetting(Activity activity) {
         Intent intent = new Intent("/");
         ComponentName cm = new ComponentName("com.android.settings",
@@ -305,18 +272,14 @@ public class PhoneUtil {
         activity.startActivityForResult(intent, 0);
     }
 
-    /**
-     * 判断wifi是否连接状态
-     */
+    //判断wifi是否连接状态
     public static boolean isWifi(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm != null && cm.getActiveNetworkInfo().getType() == ConnectivityManager.TYPE_WIFI;
     }
 
-    /**
-     * 获取移动网络运营商名称，如中国联通、中国移动、中国电信
-     */
+    //获取移动网络运营商名称，如中国联通、中国移动、中国电信
     public static String getNetworkOperatorName(Context context) {
         TelephonyManager telephonyManager = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
@@ -327,9 +290,7 @@ public class PhoneUtil {
 // PHONE_TYPE_GSM :1 手机制式为GSM，移动和联通
 // PHONE_TYPE_CDMA :2 手机制式为CDMA，电信
 // PHONE_TYPE_SIP:3
-    /**
-     * 返回移动终端类型
-     */
+    //返回移动终端类型
     public static int getPhoneType(Context context) {
         TelephonyManager telephonyManager = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
@@ -339,30 +300,14 @@ public class PhoneUtil {
 
     // 联通的3G为UMTS或HSDPA，移动和联通的2G为GPRS或EGDE，电信的2G为CDMA，电信的3G为EVDO
     public class Constants {
-        /**
-         * Unknown network class
-         */
         public static final int NETWORK_CLASS_UNKNOWN = 0;
-        /**
-         * wifi net work
-         */
         public static final int NETWORK_WIFI = 1;
-        /**
-         * "2G" networks
-         */
         public static final int NETWORK_CLASS_2_G = 2;
-        /**
-         * "3G" networks
-         */
         public static final int NETWORK_CLASS_3_G = 3;
-        /**
-         * "4G" networks
-         */
         public static final int NETWORK_CLASS_4_G = 4;
     }
-    /**
-     * 判断手机连接的网络类型(2G,3G,4G)
-     */
+
+    //判断手机连接的网络类型(2G,3G,4G)
     public static int getNetWorkClass(Context context) {
         TelephonyManager telephonyManager = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
@@ -390,9 +335,6 @@ public class PhoneUtil {
         }
     }
 
-    /**
-     * 判断当前手机的网络类型(WIFI还是2,3,4G)，需要用到上面的方法
-     */
     public static int getNetWorkStatus(Context context) {
         int netWorkType = Constants.NETWORK_CLASS_UNKNOWN;
         ConnectivityManager connectivityManager = (ConnectivityManager) context

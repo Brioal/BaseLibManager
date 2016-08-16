@@ -2,9 +2,6 @@ package com.brioal.baselib.util.klog;
 
 import android.util.Log;
 
-/**
- * Created by zhaokaiqiang on 15/11/18.
- */
 public class BaseLog {
 
     public static void printDefault(int type, String tag, String msg) {

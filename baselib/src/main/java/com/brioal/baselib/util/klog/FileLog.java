@@ -10,9 +10,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
-/**写入日志文件
- * Created by zhaokaiqiang on 15/11/18.
- */
+//写入日志文件
 public class FileLog {
 
     public static void printFile(String tag, File targetDirectory, String fileName, String headString, String msg) {
