@@ -101,8 +101,7 @@ public abstract class BaseFragment extends Fragment {
         this.inflater = inflater;
         this.container = container;
         this.saveInstanceState = savedInstanceState;
-        INITVAR();
-        INITVIEW(savedInstanceState);
+
         return mRootView;
     }
 
@@ -111,6 +110,8 @@ public abstract class BaseFragment extends Fragment {
         if (!BaseApplication.isRelease) {
             KLog.i(TAG, "onViewCreated");
         }
+        INITVAR();
+        INITVIEW(savedInstanceState);
         super.onViewCreated(view, savedInstanceState);
         new Thread(mRunnableLocal).start();
         new Thread(mRunnableNet).start();
