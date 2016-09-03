@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 
+import com.brioal.baselib.util.NetWorkUtil;
 import com.brioal.baselib.util.klog.KLog;
 
 
@@ -52,7 +53,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         INITVAR();
         INITVIEW(savedInstanceState);
         new Thread(mThreadLocal).start();
-        new Thread(mThreadNet).start();
+        if (NetWorkUtil.isNetworkConnected(mContext)) {
+            new Thread(mThreadNet).start();
+        }
     }
 
     @Override
