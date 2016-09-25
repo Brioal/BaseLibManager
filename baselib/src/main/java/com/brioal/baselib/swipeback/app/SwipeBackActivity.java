@@ -2,14 +2,14 @@
 package com.brioal.baselib.swipeback.app;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.brioal.baselib.base.BaseActivity;
 import com.brioal.baselib.swipeback.SwipeBackLayout;
 import com.brioal.baselib.swipeback.Utils;
 
 
-public class SwipeBackActivity extends AppCompatActivity implements SwipeBackActivityBase {
+public abstract class SwipeBackActivity extends BaseActivity implements SwipeBackActivityBase {
     private SwipeBackActivityHelper mHelper;
 
     @Override
