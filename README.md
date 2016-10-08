@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/Brioal/BaseLibManager.svg)](https://jitpack.io/#Brioal/BaseLibManager)
+
 ##To get a Git project into your build:
 
 #Step 1. Add the JitPack repository to your build file
@@ -13,10 +13,10 @@
 	
 ```
 
-##Step 2. Add the dependency
+##Step 2. Add the dependency[![](https://jitpack.io/v/Brioal/BaseLibManager.svg)](https://jitpack.io/#Brioal/BaseLibManager)
 ```
 	dependencies {
-	        compile 'com.github.Brioal:BaseLibManager:1.5'
+	        compile 'com.github.Brioal:BaseLibManager:xxx'
 	}
 	
 	```
