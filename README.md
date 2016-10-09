@@ -19,7 +19,7 @@
 	        compile 'com.github.Brioal:BaseLibManager:xxx'
 	}
 	
-	```
+```
 	
 ##BaseDialogFragmnent的使用实例
 
