@@ -20,7 +20,9 @@
 	}
 	
 	```
+	
 ##BaseDialogFragmnent的使用实例
+
 ```
 public class AddCollectFragment extends BaseDialogFragment {
 
@@ -53,6 +55,5 @@ public class AddCollectFragment extends BaseDialogFragment {
     	//默认为透明圆角背景
         mTheme = R.style.WhiteBackDialog;//纯白背景
     }
-
 
 ```
