@@ -26,4 +26,32 @@
         <item name="shadow_bottom">@mipmap/shadow_bottom</item>
     </style>
 
+    <style name="RoundDialog">
+        <item name="android:windowBackground">@drawable/round_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="WhiteBackDialog">
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="AnimationSlideBottom" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_bottom</item>
+    </style>
+
+
 </resources>
